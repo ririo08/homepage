@@ -16,7 +16,10 @@
         あと、こんな場所まで見に来てくれてありがとうな！
       </p>
       <blockquote class="twitter-tweet">
-        <p lang="ja" dir="ltr">
+        <p
+          lang="ja"
+          dir="ltr"
+        >
           11月のスコア出てた<br>まさかの500傑入った
           <a
             href="https://twitter.com/hashtag/Splatoon2?src=hash&amp;ref_src=twsrc%5Etfw"

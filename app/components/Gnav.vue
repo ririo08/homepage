@@ -23,8 +23,15 @@ const links = [
 
 <template>
   <div>
-    <div class="gnav-button" :class="{ 'gnav-button_on': isActive }">
-      <a id="menuButton" class="gnav-button_link" @click="isActive = !isActive">
+    <div
+      class="gnav-button"
+      :class="{ 'gnav-button_on': isActive }"
+    >
+      <a
+        id="menuButton"
+        class="gnav-button_link"
+        @click="isActive = !isActive"
+      >
         <svg
           class="gnav-button_image"
           aria-hidden="true"
@@ -43,7 +50,10 @@ const links = [
       </a>
     </div>
     <nav class="gnav">
-      <ul class="gnav-ul" :class="{ 'gnav-ul_on': isActive }">
+      <ul
+        class="gnav-ul"
+        :class="{ 'gnav-ul_on': isActive }"
+      >
         <li class="gnav-ul_title">
           Links
         </li>
@@ -57,8 +67,14 @@ const links = [
             {{ link.label }}
           </NuxtLink>
         </li>
-        <li class="gnav-ul_li" @click="hideMenu">
-          <a href="https://www.youtube.com/RirioTV" target="_blank">YouTube チャンネル</a>
+        <li
+          class="gnav-ul_li"
+          @click="hideMenu"
+        >
+          <a
+            href="https://www.youtube.com/RirioTV"
+            target="_blank"
+          >YouTube チャンネル</a>
         </li>
       </ul>
     </nav>

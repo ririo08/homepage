@@ -32,14 +32,23 @@ export default {
     </div>
     <div class="historyList">
       <ul class="historyList-ul">
-        <span v-for="item in list" :key="item.Id">
-          <li v-if="item.IsYear" class="historyList-li historyRed">
+        <span
+          v-for="item in list"
+          :key="item.Id"
+        >
+          <li
+            v-if="item.IsYear"
+            class="historyList-li historyRed"
+          >
             <span class="historyList-li_date">
               {{ item.Date }}
             </span>
             {{ item.Detail }}
           </li>
-          <li v-else class="historyList-li">
+          <li
+            v-else
+            class="historyList-li"
+          >
             <span class="historyList-li_date">{{ item.Date }}</span>
             {{ item.Detail }}
           </li>

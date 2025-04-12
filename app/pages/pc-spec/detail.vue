@@ -24,7 +24,10 @@
         </p>
       </div>
       <div class="pcSpec-img">
-        <img src="~assets/img/pcSpec/4thPC.png" alt="PC4世代目グラフ">
+        <img
+          src="~assets/img/pcSpec/4thPC.png"
+          alt="PC4世代目グラフ"
+        >
       </div>
     </section>
     <section class="pcSpec-list">
@@ -32,7 +35,11 @@
         <h2>OS</h2>
         <div class="amazlet-box">
           <div class="amazlet-image">
-            <a href="https://amzn.to/3dmHbm4" name="amazletlink" target="_blank"><img
+            <a
+              href="https://amzn.to/3dmHbm4"
+              name="amazletlink"
+              target="_blank"
+            ><img
               src="https://images-fe.ssl-images-amazon.com/images/I/41lAV432MLL._SL160_.jpg"
               alt="Microsoft Windows 10 Home April 2018 Update適用 32bit/64bit 日本語版【最新】|オンラインコード版"
             ></a>
@@ -69,7 +76,11 @@
         <h2>CPU</h2>
         <div class="amazlet-box">
           <div class="amazlet-image">
-            <a href="https://amzn.to/30OWcI0" name="amazletlink" target="_blank"><img
+            <a
+              href="https://amzn.to/30OWcI0"
+              name="amazletlink"
+              target="_blank"
+            ><img
               src="https://images-fe.ssl-images-amazon.com/images/I/41WTiL+nHjL._SL160_.jpg"
               alt="Intel CPU Core i7-8700K 3.7GHz 12Mキャッシュ 6コア/12スレッド LGA1151 BX80684I78700K 【BOX】【日本正規流通品】"
             ></a>
@@ -106,7 +117,11 @@
         <h2>GPU</h2>
         <div class="amazlet-box">
           <div class="amazlet-image">
-            <a href="https://amzn.to/3jPTeKQ" name="amazletlink" target="_blank"><img
+            <a
+              href="https://amzn.to/3jPTeKQ"
+              name="amazletlink"
+              target="_blank"
+            ><img
               src="https://images-fe.ssl-images-amazon.com/images/I/51D3y0DSXyL._SL160_.jpg"
               alt="ASUS NVIDIA GeForce RTX 2080 搭載 トリプルファンモデル 8GB ROG-STRIX-RTX2080-O8G-GAMING"
             ></a>
@@ -143,7 +158,11 @@
         <h2>マザーボード</h2>
         <div class="amazlet-box">
           <div class="amazlet-image">
-            <a href="https://amzn.to/30Rd94B" name="amazletlink" target="_blank"><img
+            <a
+              href="https://amzn.to/30Rd94B"
+              name="amazletlink"
+              target="_blank"
+            ><img
               src="https://images-fe.ssl-images-amazon.com/images/I/51vn5U87o+L._SL160_.jpg"
               alt="ASUS Intel Z370 搭載 LGA1151対応 マザーボード TUF Z370-PLUS GAMING 【ATX】"
             ></a>
@@ -180,7 +199,11 @@
         <h2>RAM</h2>
         <div class="amazlet-box">
           <div class="amazlet-image">
-            <a href="https://amzn.to/2SFbTx4" name="amazletlink" target="_blank"><img
+            <a
+              href="https://amzn.to/2SFbTx4"
+              name="amazletlink"
+              target="_blank"
+            ><img
               src="https://images-fe.ssl-images-amazon.com/images/I/318ZiTAhPwL._SL160_.jpg"
               alt="CORSAIR DDR4 デスクトップPC用 メモリモジュール VENGEANCE LPX Series ブラック 16GB×2枚キット CMK32GX4M2A2666C16"
             ></a>
@@ -217,7 +240,11 @@
         <h2>SSD</h2>
         <div class="amazlet-box">
           <div class="amazlet-image">
-            <a href="https://amzn.to/3hhXeTV" name="amazletlink" target="_blank"><img
+            <a
+              href="https://amzn.to/3hhXeTV"
+              name="amazletlink"
+              target="_blank"
+            ><img
               src="https://images-fe.ssl-images-amazon.com/images/I/31JbYdNnTZL._SL160_.jpg"
               alt="キオクシア(KIOXIA) M.2 Type2280 SSD 1TB EXCERIA NVMe SSD 5年保証 国産BiCS FLASH搭載 SSD-CK1.0N3/N"
             ></a>
@@ -254,7 +281,11 @@
         <h2>CPUクーラー</h2>
         <div class="amazlet-box">
           <div class="amazlet-image">
-            <a href="https://amzn.to/3nyoxMx" name="amazletlink" target="_blank"><img
+            <a
+              href="https://amzn.to/3nyoxMx"
+              name="amazletlink"
+              target="_blank"
+            ><img
               src="https://images-fe.ssl-images-amazon.com/images/I/411Uz2Lea2L._SL160_.jpg"
               alt="Cooler Master Hyper 212X サイドフローCPUクーラー Intel/AMD両対応 日本正規代理店品 RR-212X-20PM-J1"
             ></a>
@@ -291,7 +322,11 @@
         <h2>CPUグリス</h2>
         <div class="amazlet-box">
           <div class="amazlet-image">
-            <a href="https://amzn.to/2SH3w4j" name="amazletlink" target="_blank"><img
+            <a
+              href="https://amzn.to/2SH3w4j"
+              name="amazletlink"
+              target="_blank"
+            ><img
               src="https://images-fe.ssl-images-amazon.com/images/I/31axoQCnPPL._SL160_.jpg"
               alt="アイネックス Thermal Grizzly Kryonaut コウセイノウネツデンドウグリス GS-08"
             ></a>
@@ -328,7 +363,11 @@
         <h2>電源</h2>
         <div class="amazlet-box">
           <div class="amazlet-image">
-            <a href="https://amzn.to/3rsoUKF" name="amazletlink" target="_blank"><img
+            <a
+              href="https://amzn.to/3rsoUKF"
+              name="amazletlink"
+              target="_blank"
+            ><img
               src="~assets/img/pcSpec/ssr-750fm.jpg"
               alt="オウルテック 7年間新品交換保証 80PLUS GOLD取得 ATX 電源 ユニット セミモジュラー Skylake対応 Seasonic FOCUSシリーズ 750W SSR-750FM"
             ></a>

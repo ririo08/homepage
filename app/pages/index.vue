@@ -59,7 +59,10 @@
               alt=""
             >
             <p class="mainHead-twitchBox_title">
-              <a href="https://www.youtube.com/@RirioCH" target="_blank">
+              <a
+                href="https://www.youtube.com/@RirioCH"
+                target="_blank"
+              >
                 リリオ
               </a>
             </p>

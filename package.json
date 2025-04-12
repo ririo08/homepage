@@ -13,14 +13,14 @@
     "lint:fix": "bun lint --fix"
   },
   "devDependencies": {
-    "@nuxt/devtools": "^1.6.1",
-    "@nuxt/eslint": "^0.7.2",
-    "@nuxtjs/tailwindcss": "^6.12.2",
-    "@types/node": "^22.10.0",
+    "@nuxt/devtools": "^1.7.0",
+    "@nuxt/eslint": "^0.7.6",
+    "@nuxt/ui": "3.0.2",
+    "@types/node": "^22.14.1",
     "@vueuse/nuxt": "^11.3.0",
-    "eslint": "^9.15.0",
-    "nuxt": "^3.14.1592",
-    "sass": "^1.81.0",
-    "typescript": "^5.7.2"
+    "eslint": "^9.24.0",
+    "nuxt": "^3.16.2",
+    "sass": "^1.86.3",
+    "typescript": "^5.8.3"
   }
 }

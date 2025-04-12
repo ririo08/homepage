@@ -26,7 +26,10 @@ export default {
       </p>
       <p>
         現在
-        <span id="movielist-jstarget" class="movielist-jstarget">
+        <span
+          id="movielist-jstarget"
+          class="movielist-jstarget"
+        >
           {{ list.length }}
         </span>
         シリーズを配信中！
@@ -36,7 +39,10 @@ export default {
       <div class="movielist-entrylist">
         <p>0-1 A-Z あ-ん シリーズ順で並べています。</p>
 
-        <dt class="listTable-title" style="color: rgb(185, 89, 9)">
+        <dt
+          class="listTable-title"
+          style="color: rgb(185, 89, 9)"
+        >
           一緒に見ようシリーズ
         </dt>
         <dd class="listTable-links youlink">
@@ -47,16 +53,30 @@ export default {
             YouTube
           </a>
         </dd>
-        <div v-for="item in list" :key="item.Title">
+        <div
+          v-for="item in list"
+          :key="item.Title"
+        >
           <dt class="listTable-title">
             {{ item.Title }}
-            <span v-if="item.NewFlag === '1'" class="new">new</span>
+            <span
+              v-if="item.NewFlag === '1'"
+              class="new"
+            >new</span>
           </dt>
           <dd class="listTable-links youlink">
-            <a v-if="item.StreamLink" :href="item.StreamLink" target="_blank">
+            <a
+              v-if="item.StreamLink"
+              :href="item.StreamLink"
+              target="_blank"
+            >
               配信アーカイブ
             </a>
-            <a v-if="item.MovieLink" :href="item.MovieLink" target="_blank">
+            <a
+              v-if="item.MovieLink"
+              :href="item.MovieLink"
+              target="_blank"
+            >
               実況動画
             </a>
           </dd>

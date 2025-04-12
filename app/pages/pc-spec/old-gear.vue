@@ -29,7 +29,10 @@
         </p>
       </div>
       <div class="pcSpec-img">
-        <img src="~assets/img/pcSpec/3thPC.png" alt="PC3世代目グラフ">
+        <img
+          src="~assets/img/pcSpec/3thPC.png"
+          alt="PC3世代目グラフ"
+        >
       </div>
     </section>
     <section class="pcSpec-list">
@@ -48,7 +51,10 @@
         </p>
       </div>
       <div class="pcSpec-img">
-        <img src="~assets/img/pcSpec/2ndPC.png" alt="PC2世代目グラフ">
+        <img
+          src="~assets/img/pcSpec/2ndPC.png"
+          alt="PC2世代目グラフ"
+        >
       </div>
     </section>
     <section class="pcSpec-list">
@@ -67,7 +73,10 @@
         </p>
       </div>
       <div class="pcSpec-img">
-        <img src="~assets/img/pcSpec/1stPC.png" alt="PC1世代目グラフ">
+        <img
+          src="~assets/img/pcSpec/1stPC.png"
+          alt="PC1世代目グラフ"
+        >
       </div>
     </section>
     <section class="pcSpec-list">
@@ -497,7 +506,11 @@
         <h2>☆Mouse</h2>
         <div class="amazlet-box">
           <div class="amazlet-image">
-            <a href="https://amzn.to/3eu7k1H" name="amazletlink" target="_blank"><img
+            <a
+              href="https://amzn.to/3eu7k1H"
+              name="amazletlink"
+              target="_blank"
+            ><img
               src="https://images-fe.ssl-images-amazon.com/images/I/41DBaMXmMTL._SL160_.jpg"
               alt="Glorious ゲーミングマウス Model O- Mouse Matt Black 小型 軽量 ハニカムデザイン オムロンスイッチ搭載 1年保証 マットブラック【国内正規品】"
             ></a>
@@ -535,7 +548,11 @@
         <h2>☆Mousepad</h2>
         <div class="amazlet-box">
           <div class="amazlet-image">
-            <a href="https://amzn.to/3gqJxBf" name="amazletlink" target="_blank"><img
+            <a
+              href="https://amzn.to/3gqJxBf"
+              name="amazletlink"
+              target="_blank"
+            ><img
               src="https://images-fe.ssl-images-amazon.com/images/I/315kwa51AFL._SL160_.jpg"
               alt="【国内正規品】SteelSeries QcK マウスパッド 63004"
             ></a>

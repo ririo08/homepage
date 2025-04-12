@@ -1,7 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
-  ssr: false,
+
+  modules: [
+    '@nuxt/eslint',
+    '@vueuse/nuxt',
+    '@nuxt/ui',
+  ],
+
+  ssr: false, devtools: { enabled: true },
 
   app: {
     baseURL: '/homepage/',
@@ -13,7 +19,6 @@ export default defineNuxtConfig({
       },
       meta: [
         {
-          hid: 'og:title',
           property: 'og:title',
           content: 'リリオのホームページ',
         },
@@ -26,7 +31,6 @@ export default defineNuxtConfig({
           content: '@ririo08',
         },
         {
-          hid: 'og:image',
           property: 'og:image',
           content:
             'https://pbs.twimg.com/profile_images/1121918283446247424/ZRgtg7CP_400x400.png',
@@ -49,17 +53,15 @@ export default defineNuxtConfig({
 
   css: [],
 
-  modules: ['@nuxt/eslint', '@vueuse/nuxt', '@nuxtjs/tailwindcss'],
+  future: {
+    compatibilityVersion: 4,
+  },
+
+  compatibilityDate: '2024-11-27',
 
   eslint: {
     config: {
       stylistic: true,
     },
-  },
-
-  compatibilityDate: '2024-11-27',
-
-  future: {
-    compatibilityVersion: 4,
   },
 })

@@ -41,18 +41,35 @@ export default {
         </p>
       </div>
       <div class="pcSpec-img">
-        <img src="~assets/img/pcSpec/4thPC.png" alt="PC4世代目グラフ">
+        <img
+          src="~assets/img/pcSpec/4thPC.png"
+          alt="PC4世代目グラフ"
+        >
       </div>
     </section>
-    <section v-for="item in list" :key="item.ProductName" class="pcSpec-list">
+    <section
+      v-for="item in list"
+      :key="item.ProductName"
+      class="pcSpec-list"
+    >
       <div class="pcSpec-description">
         <h2 v-if="item.IsCategory === 'TRUE'">
           ☆{{ item.ProductName }}
         </h2>
-        <div v-else class="amazlet-box">
+        <div
+          v-else
+          class="amazlet-box"
+        >
           <div class="amazlet-image">
-            <a :href="item.Link" name="amazletlink" target="_blank">
-              <img :src="item.ImgLink" alt="商品画像">
+            <a
+              :href="item.Link"
+              name="amazletlink"
+              target="_blank"
+            >
+              <img
+                :src="item.ImgLink"
+                alt="商品画像"
+              >
             </a>
           </div>
           <div class="amazlet-info">
@@ -74,7 +91,11 @@ export default {
             </div>
             <div class="amazlet-sub-info">
               <div class="amazlet-link">
-                <a :href="item.Link" name="amazletlink" target="_blank">
+                <a
+                  :href="item.Link"
+                  name="amazletlink"
+                  target="_blank"
+                >
                   Amazon.co.jpで詳細を見る
                 </a>
               </div>
