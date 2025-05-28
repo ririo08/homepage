@@ -1,15 +1,15 @@
-<script>
-export default {
-  layout: 'blank',
-  fetch({ base, redirect, query }) {
-    const param = query.p
-    if (param === undefined)
-      return redirect('/')
+<script setup lang="ts">
+const route = useRoute()
 
-    const redirectPath = `/${param.replace(base, '')}`
-    return redirect(redirectPath)
-  },
-}
+onMounted(() => {
+  const param = route.query.p
+  if (param === undefined) {
+    navigateTo('/')
+    return
+  }
+  const redirectPath = `/${String(param)}`
+  navigateTo(redirectPath)
+})
 </script>
 
 <template>
