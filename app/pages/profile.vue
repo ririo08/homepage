@@ -1,169 +1,70 @@
+<script setup lang="ts">
+const links = ref([
+  { name: 'YouTube', url: 'https://www.youtube.com/c/RirioTV', description: 'メインチャンネル' },
+  { name: 'YouTube', url: 'https://www.youtube.com/channel/UCyRnuuwAPPLaGLf_xGykMPA', description: '配信チャンネル' },
+  { name: 'Discord', url: 'https://discord.gg/VafdUKx', description: '僕のDiscordサーバーです' },
+  { name: 'Twitter', url: 'https://twitter.com/ririo08', description: '個人的な方' },
+  { name: 'Twitter', url: 'https://twitter.com/RirioCH', description: 'オフィシャルな方' },
+  { name: 'Github', url: 'https://github.com/ririo08', description: 'このホームページもこれ' },
+  { name: 'Blog', url: 'https://rtalk.hatenablog.jp/', description: '個人的なブログ' },
+  { name: 'Blog', url: 'http://ririogame.hatenablog.com/', description: '商品とかゲームとかを紹介するブログ' },
+  { name: 'Annict.jp', url: 'https://annict.jp/@ririo08', description: 'アニメをまとめるやつ' },
+])
+</script>
+
 <template>
   <div>
-    <div class="profile-details">
-      <h1 class="global-details_h1">
+    <div>
+      <h2 class="text-2xl text-center font-bold border-b-2 border-primary-500 pb-2 mb-4">
         リリオのプロフィール
-      </h1>
-      <div class="profile-img" />
-      <p class="profile-details_p">
+      </h2>
+      <img
+        src="/img/icon.webp"
+        alt="アイコン"
+        class="w-full h-64 object-cover"
+      >
+      <p class="py-2">
         どうも、リリオです。
       </p>
-      <p class="profile-details_p">
+      <p>
         毎晩21時くらいからゲーム配信をしているぞ。<br>
         Twitchで配信した録画を編集してYouTubeにアップロードするという形式を取っているので、新しいゲームをプレイできないのが悩みだ！<br>
         基本的に編集で忙しいので、SplatoonやMinecraftなど編集しなくても良さげなゲームをプレイしがちだ！<br>
         僕の動画制作スタイルは、基本ストーリーを楽しんでいくタイプなので、ストーリーを中心に、面白い部分を使って動画を作るぞ。<br>
         あと、こんな場所まで見に来てくれてありがとうな！
       </p>
-      <blockquote class="twitter-tweet">
-        <p
-          lang="ja"
-          dir="ltr"
-        >
-          11月のスコア出てた<br>まさかの500傑入った
-          <a
-            href="https://twitter.com/hashtag/Splatoon2?src=hash&amp;ref_src=twsrc%5Etfw"
-          >#Splatoon2</a>
-          <a href="https://t.co/VuNcYCNdcf">pic.twitter.com/VuNcYCNdcf</a>
-        </p>
-        &mdash; リリオ@金欠 (@ririo08)
-        <a
-          href="https://twitter.com/ririo08/status/1466049179848155136?ref_src=twsrc%5Etfw"
-        >December 1, 2021</a>
-      </blockquote>
-      <!-- <script
-        async
-        src="https://platform.twitter.com/widgets.js"
-        charset="utf-8"
-      ></script> -->
-      <p class="profile-details_p">
+      <div class="flex justify-center">
+        <XPostEmbed />
+      </div>
+      <p>
         スプラトゥーン2のプレイ時間が3,000時間を超えて、最高値はXP2600になりました。<br>
         ガチマッチの頻度はそこまで高くなく、メインはナワバリバトルとリーグマッチが中心となっています。<br>
         スプラ配信をしている時はリグマを募集している時もあるので、よかったら見てくれよな。
       </p>
     </div>
-    <div class="profile-links">
-      <h2 class="profile-links_h2">
+    <div class="mt-4">
+      <h2 class="text-xl">
         🥺リンク集
       </h2>
       <ul>
-        <li>
+        <li
+          v-for="link in links"
+          :key="link.url"
+          class="list-disc mt-1"
+        >
           <a
-            href="https://www.youtube.com/c/RirioTV"
+            :href="link.url"
             target="_blank"
             rel="noopener noreferrer"
-          >YouTube</a>メインチャンネル
-        </li>
-        <li>
-          <a
-            href="https://www.youtube.com/channel/UCyRnuuwAPPLaGLf_xGykMPA"
-            target="_blank"
-            rel="noopener noreferrer"
-          >YouTube</a>配信チャンネル
-        </li>
-        <li>
-          <a
-            href="https://discord.gg/VafdUKx"
-            target="_blank"
-            rel="noopener noreferrer"
-          >Discord</a>僕のDiscordサーバーです
-        </li>
-        <li>
-          <a
-            href="https://twitter.com/ririo08"
-            target="_blank"
-            rel="noopener noreferrer"
-          >Twitter</a>個人的な方
-        </li>
-        <li>
-          <a
-            href="https://twitter.com/RirioCH"
-            target="_blank"
-            rel="noopener noreferrer"
-          >Twitter</a>オフィシャルな方
-        </li>
-        <li>
-          <a
-            href="https://github.com/ririo08"
-            target="_blank"
-            rel="noopener noreferrer"
-          >Github</a>このホームページもこれ
-        </li>
-        <li>
-          <a
-            href="https://rtalk.hatenablog.jp/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >Blog</a>個人的なブログ
-        </li>
-        <li>
-          <a
-            href="http://ririogame.hatenablog.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >Blog</a>商品とかゲームとかを紹介するブログ
-        </li>
-        <li>
-          <a
-            href="https://annict.jp/@ririo08"
-            target="_blank"
-            rel="noopener noreferrer"
-          >Annict.jp</a>アニメをまとめるやつ
+            class="font-bold text-info-500 hover:underline"
+          >
+            {{ link.name }}
+          </a>
+          <span class="ml-4">{{ link.description }}</span>
         </li>
       </ul>
     </div>
   </div>
 </template>
 
-<style lang="scss">
-$themeColor: orange;
-@mixin gtitlerule {
-  text-align: center;
-  padding-bottom: 8px;
-  border-bottom: 3px solid $themeColor;
-}
-.global {
-  &-details {
-    &_h1 {
-      @include gtitlerule();
-    }
-  }
-}
-.profile {
-  &-img {
-    width: 80%;
-    margin: auto;
-    height: 300px;
-    background-image: url(~assets/img/topimage.webp);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-  &-details {
-    &_p {
-      font-size: 14px;
-      padding: 0 5px;
-    }
-  }
-
-  &-links {
-    padding-top: 20px;
-
-    &_h2 {
-      font-size: 20px;
-    }
-
-    ul {
-      li {
-        padding-bottom: 8px;
-
-        a {
-          margin-right: 1rem;
-        }
-      }
-    }
-  }
-}
-</style>
+<style></style>
