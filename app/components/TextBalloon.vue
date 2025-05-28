@@ -8,7 +8,7 @@
           class="block w-full h-auto"
         >
         <div class="absolute inset-0 flex items-center justify-center">
-          <span class="text-xl font-bold mb-1">
+          <span class="text-xl font-bold mb-1 text-black">
             自作
           </span>
         </div>

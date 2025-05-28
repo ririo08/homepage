@@ -1,87 +1,84 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const updatedMovies = ref([
+  { title: 'ショート動画', url: 'https://www.youtube.com/watch?v=fbCT2s9gQ9o&list=PL_KrJ2Q-UZsHLONny2JN01LP2gbNCZRzM' },
+  { title: 'プロジェクトセカイ', url: 'https://www.youtube.com/watch?v=4dNrvUDpTz4&list=PL_KrJ2Q-UZsHAZtegABz3BqmfVjG856UE' },
+])
+</script>
 
 <template>
-  <div class="mainbox">
-    <UButton label="テスト" />
-    <div class="mainMovieSection">
-      <h2 class="mainMovieSection-h2">
-        最新の動画
-      </h2>
-      <div class="mainMovieSection-wrapper">
-        <iframe
-          class="mainMovieSection-wrapper_youTube"
-          src="https://www.youtube.com/embed/videoseries?list=PL_KrJ2Q-UZsF6b9AXCOS1aKAFDW-VlMIW"
-          frameborder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-          loading="lazy"
-        />
-      </div>
+  <section class="my-2">
+    <h2 class="text-xl font-bold text-center text-primary-500">
+      最新の動画
+    </h2>
+    <div class="px-4 md:px-10 py-2">
+      <iframe
+        src="https://www.youtube.com/embed/videoseries?list=PL_KrJ2Q-UZsEKOIT5Hgrx91ynT84tRG6t"
+        class="aspect-video w-full"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        loading="lazy"
+      />
     </div>
-    <div class="mainflex">
-      <div class="mainflex1">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-0 mt-4">
+      <div>
         <img
-          src="~assets/img/topimage.webp"
+          src="~assets/img/top-image.webp"
           type="image/webp"
           alt="メインイメージ"
         >
       </div>
-      <div class="mainflex2">
-        <div class="section">
-          <div class="mainHead">
-            <h2>&nabla; 動画更新中！</h2>
-          </div>
-          <div class="playtitle">
-            <dl>
-              <dt>ショート動画</dt>
-              <dd>
-                <a
-                  href="https://www.youtube.com/watch?v=fbCT2s9gQ9o&list=PL_KrJ2Q-UZsHLONny2JN01LP2gbNCZRzM"
-                  target="_blank"
-                >YouTube Playlist</a>
-              </dd>
-              <dt>プロジェクトセカイ</dt>
-              <dd>
-                <a
-                  href="https://www.youtube.com/watch?v=4dNrvUDpTz4&list=PL_KrJ2Q-UZsHAZtegABz3BqmfVjG856UE"
-                  target="_blank"
-                >YouTube Playlist</a>
-              </dd>
-            </dl>
-          </div>
-        </div>
-        <div class="section">
-          <div class="mainHead">
-            <h2>&nabla; YouTubeで絶賛配信中！</h2>
-          </div>
-          <div class="mainHead-twitchBox">
-            <img
-              src="https://yt3.googleusercontent.com/KwAJD21h7q5EjeuL88m9P1qZv_eJlcH0V6nYCnCK8hUnpuIAzmLNi_EEKmwnX_MTmTvAgrfjTw=s176-c-k-c0x00ffffff-no-rj"
-              alt=""
-            >
-            <p class="mainHead-twitchBox_title">
+      <div>
+        <h2 class="text-xl font-bold border-b-2 border-primary-500 pb-2 mb-2">
+          &nabla; 動画更新中！
+        </h2>
+        <dl class="font-bold text-lg">
+          <template
+            v-for="movie in updatedMovies"
+            :key="movie.title"
+          >
+            <dt class="ml-8 mt-2">
+              {{ movie.title }}
+            </dt>
+            <dd class="ml-16">
               <a
-                href="https://www.youtube.com/@RirioCH"
+                :href="movie.url"
                 target="_blank"
-              >
-                リリオ
-              </a>
-            </p>
-          </div>
-        </div>
-        <div class="section">
-          <div class="mainHead">
-            <h2>&nabla; プロフィール</h2>
-          </div>
-          <p class="wasplayedTitle">
-            <NuxtLink to="/profile">
-              詳しくはこちらをチェック
-            </NuxtLink>
-          </p>
-        </div>
+                class="text-info-500 font-bold hover:underline"
+              >YouTube Playlist</a>
+            </dd>
+          </template>
+        </dl>
+        <h2 class="text-xl font-bold border-b-2 border-primary-500 pb-2 my-2">
+          &nabla; YouTubeで絶賛配信中！
+        </h2>
+        <NuxtLink
+          to="https://www.youtube.com/@RirioCH"
+          target="_blank"
+          class="flex gap-2 justify-center py-4 hover:underline text-info-500"
+        >
+          <UAvatar
+            src="/img/icon.webp"
+            size="3xl"
+          />
+          <span class="text-2xl font-bold self-center">リリオ</span>
+          <UIcon
+            name="lucide:youtube"
+            class="size-7 self-center"
+          />
+        </NuxtLink>
+        <h2 class="text-xl font-bold border-b-2 border-primary-500 pb-2 my-2">
+          &nabla; プロフィール
+        </h2>
+        <NuxtLink
+          to="/profile"
+          class="text-info-500 font-bold hover:underline"
+        >
+          詳しくはこちらをチェック
+        </NuxtLink>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <style>

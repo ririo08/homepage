@@ -66,7 +66,7 @@ const links = [
         <li
           v-for="link in links"
           :key="link.label"
-          class="hover:underline border-b-2 border-primary-500 text-info-600"
+          class="hover:underline border-b-2 border-primary-500 text-info-500 font-bold"
           @click="hideMenu"
         >
           <NuxtLink

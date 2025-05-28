@@ -1,12 +1,12 @@
 <script setup lang="ts"></script>
 
 <template>
-  <UContainer>
+  <UContainer class="mb-20">
     <Header />
     <GlobalMenu />
     <slot />
-    <footer>
-      <small>@リリオ 2019</small>
+    <footer class="text-center">
+      <small>@リリオ 2025</small>
     </footer>
   </UContainer>
 </template>
