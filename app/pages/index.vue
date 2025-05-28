@@ -6,7 +6,7 @@ const updatedMovies = ref([
 </script>
 
 <template>
-  <section class="my-2">
+  <section>
     <h2 class="text-xl font-bold text-center text-primary-500">
       最新の動画
     </h2>

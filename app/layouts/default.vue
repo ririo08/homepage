@@ -4,7 +4,9 @@
   <UContainer class="mb-20">
     <Header />
     <GlobalMenu />
-    <slot />
+    <main class="my-4">
+      <slot />
+    </main>
     <footer class="text-center">
       <small>@リリオ 2025</small>
     </footer>
