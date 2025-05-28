@@ -1,4 +1,9 @@
 <script setup lang="ts">
+import { breakpointsTailwind, useBreakpoints } from '@vueuse/core'
+
+const breakpoints = useBreakpoints(breakpointsTailwind)
+const isAlwaysActive = breakpoints.greater('2xl')
+
 const isActive = ref(false)
 
 onMounted(() => {
@@ -18,164 +23,61 @@ const links = [
   { label: 'PCと周辺機器のページ', path: '/pc-spec' },
   { label: '動画リスト', path: '/movielist' },
   { label: '活動記録', path: '/history' },
+  { label: 'YouTube チャンネル', path: 'https://www.youtube.com/@RirioCH' },
 ]
 </script>
 
 <template>
-  <div>
+  <div
+    :class="[
+      'fixed left-0  lg:top-0 z-10 lg:h-full lg:border-t-0 flex bg-[var(--ui-bg)]',
+      'transition-all duration-300 ease-out',
+      'bottom-0 h-20 border-t-2 border-primary-500',
+      isActive ? 'h-full' : '',
+    ]"
+  >
     <div
-      class="gnav-button"
-      :class="{ 'gnav-button_on': isActive }"
+      class="w-12 h-full text-primary-500 cursor-pointer border-r-2"
+      @click="isActive = !isActive"
     >
-      <a
-        id="menuButton"
-        class="gnav-button_link"
-        @click="isActive = !isActive"
-      >
-        <svg
-          class="gnav-button_image"
-          aria-hidden="true"
-          focusable="false"
-          data-prefix="fas"
-          data-icon="ellipsis-v"
-          role="img"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 192 512"
-        >
-          <path
-            fill="orange"
-            d="M96 184c39.8 0 72 32.2 72 72s-32.2 72-72 72-72-32.2-72-72 32.2-72 72-72zM24 80c0 39.8 32.2 72 72 72s72-32.2 72-72S135.8 8 96 8 24 40.2 24 80zm0 352c0 39.8 32.2 72 72 72s72-32.2 72-72-32.2-72-72-72-72 32.2-72 72z"
-          />
-        </svg>
-      </a>
+      <UIcon
+        name="lucide:ellipsis-vertical"
+        class="size-12 my-5"
+      />
     </div>
-    <nav class="gnav">
+    <nav
+      :class="[
+        'h-full overflow-hidden border-primary-500',
+        'transition-all duration-300 ease-out',
+        isAlwaysActive || isActive ? 'w-64 border-r-2' : 'w-0 border-r-0',
+      ]"
+    >
       <ul
-        class="gnav-ul"
-        :class="{ 'gnav-ul_on': isActive }"
+        :class="[
+          'space-y-4 pt-6 whitespace-nowrap px-4',
+          'transition-opacity',
+          isAlwaysActive || isActive ? 'opacity-100' : 'opacity-0',
+        ]"
       >
-        <li class="gnav-ul_title">
+        <li class="font-bold text-lg text-center">
           Links
         </li>
+
         <li
           v-for="link in links"
           :key="link.label"
-          class="gnav-ul_li"
+          class="hover:underline border-b-2 border-primary-500 text-info-600"
           @click="hideMenu"
         >
-          <NuxtLink :to="link.path">
-            {{ link.label }}
-          </NuxtLink>
-        </li>
-        <li
-          class="gnav-ul_li"
-          @click="hideMenu"
-        >
-          <a
-            href="https://www.youtube.com/RirioTV"
-            target="_blank"
-          >YouTube チャンネル</a>
+          <NuxtLink
+            :to="link.path"
+            :target="link.path.startsWith('http') ? '_blank' : undefined"
+          >{{ link.label }}</NuxtLink>
         </li>
       </ul>
     </nav>
   </div>
 </template>
 
-<style lang="scss">
-$themeColor: orange;
-
-@keyframes show {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-.gnav {
-  position: fixed;
-  z-index: 10;
-
-  &-button {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 40px;
-    height: 100%;
-    background-color: #fff;
-    z-index: 10;
-    border-right: solid 1px $themeColor;
-    box-shadow: 4px 4px 10px -5px black;
-    transition: all 300ms 0s ease;
-
-    &_link {
-      display: block;
-      width: 40px;
-      height: 100%;
-      color: $themeColor;
-      cursor: pointer;
-      border-right: solid 1px $themeColor;
-
-      &:hover {
-        color: $themeColor;
-      }
-    }
-
-    &_image {
-      display: block;
-      margin: auto;
-      padding-top: 30px;
-      width: 15px;
-    }
-
-    &_on {
-      width: 350px;
-    }
-  }
-
-  &-ul {
-    display: none;
-    position: fixed;
-    top: 50px;
-    left: 50px;
-    list-style: none;
-    padding-left: 0;
-    width: 300px;
-    padding-right: 10px;
-
-    &_on {
-      display: block;
-      animation: show 0.5s linear 0s;
-    }
-
-    &_title {
-      font-size: 20px;
-      font-weight: bold;
-      text-align: center;
-    }
-
-    &_li {
-      padding-top: 20px;
-      border-bottom: 2px solid $themeColor;
-    }
-  }
-}
-
-@media screen and (max-width: 1099px) {
-  .gnav-button {
-    height: 120px;
-    border-top: solid 1px orange;
-  }
-
-  .gnav-button_image {
-    padding-top: 40px;
-  }
-
-  .gnav-button_on {
-    width: 350px;
-    height: 100%;
-  }
-}
+<style scoped>
 </style>
