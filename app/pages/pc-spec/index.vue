@@ -37,7 +37,7 @@ const { data: list } = await useFetch<GadgetList[]>('https://ririo.dev/db/pc-gad
         <p class="mt-4">
           <span>詳細は</span>
           <NuxtLink
-            to="pcSpec/detail"
+            to="/pc-spec/detail"
             class="text-info-500 hover:underline font-bold"
           >
             こちら
@@ -50,7 +50,7 @@ const { data: list } = await useFetch<GadgetList[]>('https://ririo.dev/db/pc-gad
       </div>
       <div>
         <img
-          src="~assets/img/pcSpec/4thPC.png"
+          src="~/assets/img/pc-spec/pc-4th.png"
           alt="PC4世代目グラフ"
         >
       </div>

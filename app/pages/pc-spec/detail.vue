@@ -42,7 +42,7 @@ const { data: list } = await useFetch<GadgetList[]>('https://ririo.dev/db/pc-par
       </div>
       <div>
         <img
-          src="~assets/img/pcSpec/4thPC.png"
+          src="~/assets/img/pc-spec/pc-4th.png"
           alt="PC4世代目グラフ"
         >
       </div>
