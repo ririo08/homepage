@@ -19,7 +19,7 @@ const { data: list } = await useFetch<GadgetList[]>('https://ririo.dev/db/pc-gad
     <p>
       <span>旧使用機器は</span>
       <NuxtLink
-        to="/pcSpec/oldGear"
+        to="/pc-spec/old-gear"
         class="text-info-500 hover:underline font-bold"
       >
         こちら
