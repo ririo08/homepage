@@ -58,7 +58,7 @@ const updatedMovies = ref([
           class="flex gap-2 justify-center py-4 hover:underline text-info-500"
         >
           <UAvatar
-            src="/img/icon.webp"
+            src="/homepage/img/icon.webp"
             size="3xl"
           />
           <span class="text-2xl font-bold self-center">リリオ</span>
