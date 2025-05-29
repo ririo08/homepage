@@ -8,7 +8,7 @@ onMounted(() => {
     return
   }
   const redirectPath = `/${String(param)}`
-  navigateTo(redirectPath)
+  navigateTo(redirectPath, { external: true })
 })
 </script>
 
