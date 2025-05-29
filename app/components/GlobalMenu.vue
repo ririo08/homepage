@@ -4,16 +4,17 @@ import { breakpointsTailwind, useBreakpoints } from '@vueuse/core'
 const breakpoints = useBreakpoints(breakpointsTailwind)
 const isAlwaysActive = breakpoints.greater('2xl')
 
+const MENU_THRESHOLD = 1700
 const isActive = ref(false)
 
 onMounted(() => {
-  if (window.innerWidth >= 1700) {
+  if (window.innerWidth >= MENU_THRESHOLD) {
     isActive.value = true
   }
 })
 
 function hideMenu() {
-  if (window.innerWidth <= 1700) {
+  if (window.innerWidth <= MENU_THRESHOLD) {
     isActive.value = false
   }
 }
