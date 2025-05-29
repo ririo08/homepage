@@ -55,28 +55,25 @@ onMounted(() => {
       </NuxtLink>
     </p>
     <ul>
-      <template
+      <li
         v-for="item in sortedList"
         :key="item.Id"
+        :class="[
+          'font-bold md:flex gap-x-4',
+          item.IsYear === '1' ? 'text-red-600 mt-10' : 'mt-2',
+        ]"
       >
-        <li
-          :class="[
-            'font-bold md:flex gap-x-4',
-            item.IsYear === '1' ? 'text-red-600 mt-10' : 'mt-2',
-          ]"
-        >
-          <p>
-            {{ item.Date }}
-          </p>
-          <p>
-            <a
-              :href="item.Link || undefined"
-              :class="item.Link && 'text-primary hover:underline'"
-              target="_blank"
-            >{{ item.Detail }}</a>
-          </p>
-        </li>
-      </template>
+        <p>
+          {{ item.Date }}
+        </p>
+        <p>
+          <a
+            :href="item.Link || undefined"
+            :class="item.Link && 'text-primary hover:underline'"
+            target="_blank"
+          >{{ item.Detail }}</a>
+        </p>
+      </li>
     </ul>
   </div>
 </template>
