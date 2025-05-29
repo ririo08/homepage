@@ -7,7 +7,9 @@ onMounted(() => {
     navigateTo('/')
     return
   }
-  const redirectPath = String(param)
+  const redirectPath = String(param).startsWith('/homepage')
+    ? String(param).replace(/^\/homepage/, '') || '/'
+    : String(param)
   navigateTo(redirectPath)
 })
 </script>
