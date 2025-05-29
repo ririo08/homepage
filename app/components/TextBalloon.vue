@@ -4,7 +4,7 @@
       <div class="relative inline-block">
         <img
           src="~/assets/img/text-baloon.webp"
-          alt="サンプル画像"
+          alt="自作のテキストバルーン"
           class="block w-full h-auto"
         >
         <div class="absolute inset-0 flex items-center justify-center">
