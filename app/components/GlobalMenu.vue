@@ -25,6 +25,11 @@ const links = [
   { label: '活動記録', path: '/history' },
   { label: 'YouTube チャンネル', path: 'https://www.youtube.com/@RirioCH' },
 ]
+
+const colorMode = useColorMode()
+const setMode = (mode: 'light' | 'dark' | 'system') => {
+  colorMode.preference = mode
+}
 </script>
 
 <template>
@@ -59,9 +64,9 @@ const links = [
           isAlwaysActive || isActive ? 'opacity-100' : 'opacity-0',
         ]"
       >
-        <li class="font-bold text-lg text-center">
+        <div class="font-bold text-lg text-center">
           Links
-        </li>
+        </div>
 
         <li
           v-for="link in links"
@@ -75,6 +80,27 @@ const links = [
           >{{ link.label }}</NuxtLink>
         </li>
       </ul>
+
+      <UButtonGroup class="flex justify-center mt-4">
+        <UButton
+          color="neutral"
+          :variant="colorMode.preference ==='system' ? 'subtle' : 'outline'"
+          icon="lucide:monitor"
+          @click="setMode('system')"
+        />
+        <UButton
+          color="neutral"
+          :variant="colorMode.preference === 'light' ? 'subtle' : 'outline'"
+          icon="lucide:sun"
+          @click="setMode('light')"
+        />
+        <UButton
+          color="neutral"
+          :variant="colorMode.preference ==='dark' ? 'subtle' : 'outline'"
+          icon="lucide:moon"
+          @click="setMode('dark')"
+        />
+      </UButtonGroup>
     </nav>
   </div>
 </template>

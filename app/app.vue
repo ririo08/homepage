@@ -1,9 +1,4 @@
-<script setup lang="ts">
-const isDark = useDark()
-onMounted(() => {
-  isDark.value = true
-})
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <UApp>
