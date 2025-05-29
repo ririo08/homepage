@@ -4,17 +4,17 @@
 
 ```bash
 # install dependencies
-$ yarn install
+$ bun install
 
 # serve with hot reload at localhost:3000
-$ yarn dev
+$ bun dev
 
 # build for production and launch server
-$ yarn build
-$ yarn start
+$ bun build
+$ bun start
 
 # generate static project
-$ yarn generate
+$ bun generate
 ```
 
 For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
